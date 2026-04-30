@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300;
+  }
+}
+
+@layer components {
+  /* Button Utilities */
+  .btn-primary {
+    @apply px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 border-2 border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg font-semibold transition-all;
+  }
+
+  .btn-small {
+    @apply px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors duration-200;
+  }
+
+  /* Text Utilities */
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-alt {
+    @apply bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent;
+  }
+
+  /* Card Utilities */
+  .card-base {
+    @apply p-6 rounded-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 bg-white dark:bg-slate-800/50;
+  }
+
+  .card-hover {
+    @apply card-base hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-lg;
+  }
+
+  /* Section Utilities */
+  .section-container {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .gradient-bg-primary {
+    @apply bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-950 dark:to-purple-950;
+  }
+
+  .gradient-bg-secondary {
+    @apply bg-gradient-to-br from-purple-50 to-pink-50 dark:from-slate-950 dark:to-slate-900;
+  }
+
+  .gradient-bg-multi {
+    @apply bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-950 dark:via-slate-900 dark:to-purple-950;
+  }
+}

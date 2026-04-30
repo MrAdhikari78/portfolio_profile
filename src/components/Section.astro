@@ -1,0 +1,61 @@
+---
+// Reusable section wrapper for consistent spacing and layout
+interface Props {
+  title?: string;
+  subtitle?: string;
+  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '4xl';
+  padding?: 'sm' | 'md' | 'lg';
+  background?: 'white' | 'light' | 'dark';
+}
+
+const { 
+  title, 
+  subtitle, 
+  maxWidth = '4xl',
+  padding = 'md',
+  background = 'white'
+} = Astro.props;
+
+const paddingClasses = {
+  sm: 'py-8 px-4',
+  md: 'py-16 px-4',
+  lg: 'py-20 px-4',
+};
+
+const bgClasses = {
+  white: 'bg-white dark:bg-slate-900',
+  light: 'bg-slate-50 dark:bg-slate-800',
+  dark: 'bg-slate-900 dark:bg-slate-950',
+};
+
+const maxWidthClasses = {
+  sm: 'max-w-sm',
+  md: 'max-w-md',
+  lg: 'max-w-lg',
+  xl: 'max-w-xl',
+  '2xl': 'max-w-2xl',
+  '4xl': 'max-w-4xl',
+};
+---
+
+<section class={`${paddingClasses[padding]} ${bgClasses[background]}`}>
+  <div class={`${maxWidthClasses[maxWidth]} mx-auto`}>
+    {(title || subtitle) && (
+      <div class="mb-12 text-center">
+        {title && (
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              {title}
+            </span>
+          </h2>
+        )}
+        {subtitle && (
+          <p class="text-lg text-slate-600 dark:text-slate-400">
+            {subtitle}
+          </p>
+        )}
+      </div>
+    )}
+    <slot />
+  </div>
+</section>
