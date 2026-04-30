@@ -1,9 +1,8 @@
-name: Deploy Portfolio to GitHub Pages
+name: Deploy Astro Portfolio to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -12,45 +11,52 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: "pages"
   cancel-in-progress: false
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build with Astro
+      - name: Build Astro site
         run: npm run build
 
-      - name: Copy CNAME to dist
-        run: cp CNAME dist/CNAME
+      - name: Copy CNAME if exists
+        run: |
+          if [ -f CNAME ]; then
+            cp CNAME dist/CNAME
+          fi
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
-    name: Deploy
     needs: build
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
