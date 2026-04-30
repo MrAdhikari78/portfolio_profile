@@ -1,34 +1,13 @@
 // src/constants/navigation.ts
-// Centralized navigation data to avoid duplication across components
+// Re-exports from data files for backward compatibility
+// DEPRECATED: Import directly from src/data/ files instead
 
-export const NAV_LINKS = [
-  { href: '/', label: 'Home' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/blog', label: 'Blog' },
-  { href: '#contact', label: 'Contact' },
-];
+import navigationData from '../data/navigation.json';
+import siteData from '../data/site.json';
 
-export const SOCIAL_LINKS = [
-  {
-    name: 'GitHub',
-    url: 'https://github.com',
-    icon: 'github',
-    ariaLabel: 'GitHub',
-  },
-  {
-    name: 'LinkedIn',
-    url: 'https://linkedin.com',
-    icon: 'linkedin',
-    ariaLabel: 'LinkedIn',
-  },
-  {
-    name: 'Twitter',
-    url: 'https://twitter.com',
-    icon: 'twitter',
-    ariaLabel: 'Twitter',
-  },
-];
+export const NAV_LINKS = navigationData.navLinks;
+export const SOCIAL_LINKS = navigationData.socialLinks;
 
-export const CONTACT_EMAIL = 'your.email@example.com';
-export const SITE_TITLE = 'Manisha Adhikari | Portfolio';
-export const SITE_DESCRIPTION = 'Full Stack Developer & Creative Problem Solver';
+export const CONTACT_EMAIL = siteData.site.email;
+export const SITE_TITLE = siteData.site.title;
+export const SITE_DESCRIPTION = siteData.site.description;

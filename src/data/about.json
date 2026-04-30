@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "title": "Hi, I'm Manisha Adhikari",
+    "subtitle": "Full Stack Developer & Creative Problem Solver",
+    "description": "I craft beautiful, responsive web experiences with modern technologies. Passionate about clean code, user-centric design, and continuous learning."
+  },
+  "about": {
+    "bio": "I'm a passionate full-stack developer with 5+ years of experience building web applications. I specialize in React, Node.js, and modern web technologies.",
+    "location": "Your City, Country",
+    "yearsExperience": 5
+  }
+}

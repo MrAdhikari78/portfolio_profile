@@ -1,0 +1,23 @@
+{
+  "app": {
+    "name": "Portfolio",
+    "version": "1.0.0",
+    "environment": "production"
+  },
+  "theme": {
+    "defaultTheme": "dark",
+    "supportsDarkMode": true,
+    "colors": {
+      "primary": "#3b82f6",
+      "secondary": "#8b5cf6",
+      "accent": "#ec4899"
+    }
+  },
+  "features": {
+    "darkMode": true,
+    "animations": true,
+    "blog": true,
+    "projects": true,
+    "contact": true
+  }
+}

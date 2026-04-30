@@ -1,0 +1,58 @@
+{
+  "projects": [
+    {
+      "id": "ecommerce-platform",
+      "title": "E-Commerce Platform",
+      "description": "Full-stack e-commerce solution with product catalog, shopping cart, and payment integration using Stripe.",
+      "tags": ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
+      "link": "https://example.com",
+      "github": "https://github.com/yourusername/ecommerce",
+      "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=500&h=300&fit=crop"
+    },
+    {
+      "id": "task-management",
+      "title": "Task Management App",
+      "description": "Real-time collaborative task management app with team features, notifications, and progress tracking.",
+      "tags": ["Vue 3", "Firebase", "Tailwind CSS"],
+      "link": "https://example.com",
+      "github": "https://github.com/yourusername/task-app",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop"
+    },
+    {
+      "id": "analytics-dashboard",
+      "title": "Analytics Dashboard",
+      "description": "Interactive dashboard for real-time data visualization with charts, filters, and custom reports.",
+      "tags": ["React", "Chart.js", "Express", "MongoDB"],
+      "link": "https://example.com",
+      "github": "https://github.com/yourusername/analytics",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop"
+    },
+    {
+      "id": "weather-app",
+      "title": "Weather App",
+      "description": "Beautiful weather application with real-time data, forecasts, and multiple location support.",
+      "tags": ["React", "Weather API", "Mapbox", "Vite"],
+      "link": "https://example.com",
+      "github": "https://github.com/yourusername/weather-app",
+      "image": "https://images.unsplash.com/photo-1563183897-5f6c0e7b7e5d?w=500&h=300&fit=crop"
+    },
+    {
+      "id": "social-media-feed",
+      "title": "Social Media Feed",
+      "description": "Dynamic social media feed with infinite scroll, likes, comments, and real-time updates using WebSockets.",
+      "tags": ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
+      "link": "https://example.com",
+      "github": "https://github.com/yourusername/social-feed",
+      "image": "https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=500&h=300&fit=crop"
+    },
+    {
+      "id": "portfolio-website",
+      "title": "Portfolio Website",
+      "description": "Modern, responsive portfolio website with dark mode, animations, and optimized for GitHub Pages.",
+      "tags": ["Astro", "React", "Tailwind CSS", "Framer Motion"],
+      "link": "https://example.com",
+      "github": "https://github.com/yourusername/portfolio",
+      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop"
+    }
+  ]
+}

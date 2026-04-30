@@ -1,0 +1,20 @@
+{
+  "skills": [
+    {
+      "category": "Frontend",
+      "technologies": ["React", "Vue 3", "Astro", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"]
+    },
+    {
+      "category": "Backend",
+      "technologies": ["Node.js", "Express", "PostgreSQL", "MongoDB", "Firebase", "Prisma"]
+    },
+    {
+      "category": "Tools & DevOps",
+      "technologies": ["Git", "Docker", "CI/CD", "GitHub Actions", "AWS", "Vercel"]
+    },
+    {
+      "category": "Design",
+      "technologies": ["Figma", "Adobe XD", "UI/UX Design", "Responsive Design", "Accessibility"]
+    }
+  ]
+}
