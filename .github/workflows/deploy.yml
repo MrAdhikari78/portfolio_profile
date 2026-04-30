@@ -1,36 +1,54 @@
+<<<<<<< HEAD
 name: Deploy Astro Portfolio to GitHub Pages
+=======
+name: Deploy Astro to GitHub Pages
+>>>>>>> 2007d14 (int)
 
 on:
   push:
     branches: ["main"]
+<<<<<<< HEAD
   workflow_dispatch:
+=======
+>>>>>>> 2007d14 (int)
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+<<<<<<< HEAD
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
+=======
+>>>>>>> 2007d14 (int)
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+<<<<<<< HEAD
       - name: Checkout repository
         uses: actions/checkout@v4
+=======
+      - uses: actions/checkout@v4
+>>>>>>> 2007d14 (int)
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
+<<<<<<< HEAD
           node-version: 22
           cache: npm
+=======
+          node-version: 20
+>>>>>>> 2007d14 (int)
 
-      - name: Install dependencies
-        run: npm install
+      - run: npm install
+      - run: npm run build
 
+<<<<<<< HEAD
       - name: Build Astro site
         run: npm run build
 
@@ -45,12 +63,16 @@ jobs:
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+=======
+      - uses: actions/upload-pages-artifact@v3
+>>>>>>> 2007d14 (int)
         with:
           path: ./dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+<<<<<<< HEAD
 
     environment:
       name: github-pages
@@ -60,3 +82,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+=======
+    steps:
+      - uses: actions/deploy-pages@v4
+>>>>>>> 2007d14 (int)
