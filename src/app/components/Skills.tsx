@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Code, Settings, Globe, Database, TestTube, Cloud } from "lucide-react";
+import { Code, TestTube } from "lucide-react";
 
 export function Skills() {
   const skillCategories = [
@@ -12,7 +12,7 @@ export function Skills() {
     {
       icon: TestTube,
       title: "AI / Machine Learning",
-      skills: ["Machine Learning", "Reinforcement Learning", "Computer Vision", "Natural Language Processing", "TensorFlow", "PyTorch"]
+      skills: ["OpenCV", "TensorFlow", "PyTorch"]
     }
   ];
 
@@ -26,11 +26,12 @@ export function Skills() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Changed to flex layout on larger screens to keep them centered naturally */}
+        <div className="flex flex-col md:flex-row justify-center gap-6 max-w-4xl mx-auto">
           {skillCategories.map((category, index) => {
             const IconComponent = category.icon;
             return (
-              <Card key={index} className="h-full">
+              <Card key={index} className="w-full md:w-1/2 lg:max-w-md h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
                     <IconComponent className="h-5 w-5 text-primary" />
