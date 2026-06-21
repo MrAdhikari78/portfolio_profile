@@ -67,7 +67,7 @@ export const ParticleBackground = () => {
       (window as any).particlesJS('particles-js', {
         particles: {
           number: {
-            value: 100,
+            value: 75,
             density: {
               enable: true,
               value_area: 800,
@@ -108,7 +108,7 @@ export const ParticleBackground = () => {
           },
           line_linked: {
             enable: true,
-            distance: 150,
+            distance: 140,
             color: lineColor,
             opacity: 0.4,
             width: 1,
