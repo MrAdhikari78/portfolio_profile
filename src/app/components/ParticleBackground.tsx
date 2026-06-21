@@ -83,7 +83,7 @@ export const ParticleBackground = () => {
               color: particleColor,
             },
             polygon: {
-              nb_sides: 3,
+              nb_sides: 6,
             },
           },
           opacity: {
